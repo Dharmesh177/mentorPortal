@@ -150,7 +150,7 @@ function Me(props) {
           </div>
         </div>
       </div>
-    </div >
+    </div>
 
   )
 }

@@ -73,7 +73,7 @@ function App() {
           <Route exact path="/login" element={<Developerlogin />}></Route>
           <Route exact path="/signin" element={<Developersignin />}></Route>
           <Route exact path="/forgot" element={<Developerforgot />}></Route>
-          <Route exact path="/community" element={<Chatcomponent />}></Route>
+          {/* <Route exact path="/community" element={<Chatcomponent />}></Route> */}
           {/* <Route exact path="/chat/:to" element={<Mainchat />}></Route> */}
         </Routes>
 
