@@ -18,7 +18,8 @@ export default function Home() {
     const dispatch = useDispatch();
 
     const { mentors } = useSelector(state => state.mentor)
-    mentors ? console.log('mentors', mentors) : console.log('nothing');
+    mentors ? console.log('mentorss', mentors) : console.log('nothing');
+    // mentors ? console.log(mentors[0].mentor.name) : console.log('nothing');
 
 
     useEffect(() => {
@@ -168,7 +169,7 @@ export default function Home() {
         <>
             <Header index={1} />
 
-           
+
             <div style={{ width: "100%" }}>
                 <div
                     style={{ paddingLeft: 40, paddingRight: 40, justifyContent: "left" }}
@@ -343,15 +344,15 @@ export default function Home() {
             <div className="container">
 
                 <>
-                    {mentors.map((mentor) => {
+                    {mentors.length > 0 && mentors?.map((mentor) => {
                         return (
                             <Me style={{ marginTop: "15px" }}
-                                name={mentor.mentor.name}
-                                intro ={mentor.intro}
+                                name={mentor?.mentor?.name}
+                                intro={mentor?.intro}
                             />
                         )
                     })}
-                   
+
                 </>
 
 

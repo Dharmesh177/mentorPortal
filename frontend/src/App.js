@@ -35,50 +35,52 @@ import Roadmap from './Components/Roadmap/Roadmap';
 import Profile from './Components/Profile/Profile';
 import FullRoadmapShow from './Components/Roadmap/FullRoadmapShow';
 import FullEvent from './Components/Event/FullEvent';
+import Chatcomponent from './Components/Community/Chatcomponent';
 
 
 function App() {
   return (
     <div className="App">
-    <BrowserRouter>
-    <Routes>
-      <Route index path="/" element={<Home/>} />
-      <Route index path="/blog" element={<Blogs/>} />
-      <Route index path="/blogpage" element={<BlogPage/>} />
-      <Route index path="/addblog" element={<AddBlog/>} />
-      <Route index path="/myblog" element={<MyBlogs/>} />
-      <Route index path="/mentorpage" element={<UniProfile/>} />
-      <Route index path="/mentorevents" element={<MEvents/>} />
-      <Route index path="/mentorhistory" element={<MHistory/>} />
-      <Route index path="/mentorresources" element={<MResources/>} />
-      <Route index path="/temp" element={<FullEvent/>} />
-      <Route index path="/editblog/:blogid" element={<EditBlog/>} />
-      <Route index path="/login" element={<Login/>} />
-      <Route index path="/event" element={<EventPage/>} />
-      <Route index path="/resources" element={<ResourcePage/>} />
-      <Route index path="/profile" element={<Profile/>} />
-      <Route index path="/profilehistory" element={<StudentProfile/>} />
-      <Route index path="/menteeprofile" element={<MyProfile/>} />
-      <Route index path="/pop" element={<Pop/>} />
-      <Route index path="/roadmap" element={<Roadmap/>} />
-      <Route index path="/FullRoadmapShow" element={<FullRoadmapShow/>} />
-      
-      <Route index path="/becomementor" element={<BecomeMenter/>} />
+      <BrowserRouter>
+        <Routes>
+          <Route index path="/" element={<Home />} />
+          <Route index path="/blog" element={<Blogs />} />
+          <Route index path="/blogpage" element={<BlogPage />} />
+          <Route index path="/addblog" element={<AddBlog />} />
+          <Route index path="/myblog" element={<MyBlogs />} />
+          <Route index path="/mentorpage" element={<UniProfile />} />
+          <Route index path="/mentorevents" element={<MEvents />} />
+          <Route index path="/mentorhistory" element={<MHistory />} />
+          <Route index path="/mentorresources" element={<MResources />} />
+          <Route index path="/temp" element={<FullEvent />} />
+          <Route index path="/editblog/:blogid" element={<EditBlog />} />
+          <Route index path="/login" element={<Login />} />
+          <Route index path="/event" element={<EventPage />} />
+          <Route index path="/resources" element={<ResourcePage />} />
+          <Route index path="/profile" element={<Profile />} />
+          <Route index path="/profilehistory" element={<StudentProfile />} />
+          <Route index path="/menteeprofile" element={<MyProfile />} />
+          <Route index path="/pop" element={<Pop />} />
+          <Route index path="/roadmap" element={<Roadmap />} />
+          <Route index path="/FullRoadmapShow" element={<FullRoadmapShow />} />
 
-      <Route exact path="/slogin" element={<Studentlog />}></Route>
-      <Route exact path="/ssignin" element={<StudentSign />}></Route>
-      <Route exact path="/sforgot" element={<StudentForgot />}></Route>
+          <Route index path="/becomementor" element={<BecomeMenter />} />
 
-      <Route exact path="/login" element={<Developerlogin />}></Route>
-      <Route exact path="/signin" element={<Developersignin />}></Route>
-      <Route exact path="/forgot" element={<Developerforgot />}></Route>
-      <Route exact path="/chat/:to" element={<Mainchat />}></Route>
-    </Routes>
-  
-    <Routes>  
-    <Route index path="/slogin/" element={<Studentlog/>} />
-  </Routes>   
-  </BrowserRouter>
+          <Route exact path="/slogin" element={<Studentlog />}></Route>
+          <Route exact path="/ssignin" element={<StudentSign />}></Route>
+          <Route exact path="/sforgot" element={<StudentForgot />}></Route>
+
+          <Route exact path="/login" element={<Developerlogin />}></Route>
+          <Route exact path="/signin" element={<Developersignin />}></Route>
+          <Route exact path="/forgot" element={<Developerforgot />}></Route>
+          <Route exact path="/community" element={<Chatcomponent />}></Route>
+          {/* <Route exact path="/chat/:to" element={<Mainchat />}></Route> */}
+        </Routes>
+
+        <Routes>
+          <Route index path="/slogin/" element={<Studentlog />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
